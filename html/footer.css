@@ -1,0 +1,60 @@
+body {
+    width: 100%;
+}
+
+body {
+    font-family: 'Raleway', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#bloc_page {
+    margin: 0px 30px;
+}
+
+footer {
+    width: 100%;    
+    display: flex;    
+    background-color: #F2F2F2;
+    /*border: 2px solid red;*/    
+}
+
+.conteneur {
+    display: flex;
+    width: 75%;    
+    justify-content: space-between;
+    padding-left: 3%;
+    /*border: 3px solid black;*/
+}
+
+.conteneur2 {
+    width: 25%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /*border: 2px solid rgb(119, 0, 255);*/    
+}
+
+.conteneur2 li, .conteneur1 li {
+    list-style-type: none;
+}
+
+.conteneur1 {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;   
+    /*border: 2px solid rgb(119, 0, 255);*/    
+}
+
+ul.conteneur1>li {
+    padding: 2% 0% 2% 0%;
+}
+
+ul.conteneur2>li {
+    padding: 2% 0% 2% 0%;
+}
+
+a.lien {
+    text-decoration: none;
+    color: black;
+}
