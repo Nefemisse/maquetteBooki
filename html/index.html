@@ -23,11 +23,17 @@
                 <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
                 <p class="mute">En plein centre ville ou en pleine nature</p>
             </div>
-            <form>
+            <form action="./404.html" method="GET">
                 <div id="recherche">
-                    <span class="loca"><i class="fa-solid fa-location-dot blue"></i></span><input type="search" placeholder="  Ville, Pays"><button class="recherche">Rechercher<span class="none"><i class="fa-solid fa-magnifying-glass"></i></span></button>
+                    <span class="loca">
+                        <i class="fa-solid fa-location-dot blue"></i>
+                    </span>
+                    <input type="text" name="search" placeholder="  Ville, Pays">
+                    <button type="submit" class="recherche">Rechercher
+                        <span class="none"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    </button>
                 </div>
-                </form>
+            </form>
             <div class="filtres">
                 <h3>Filtres</h3>
                 <div id="switch">

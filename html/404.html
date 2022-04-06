@@ -1,0 +1,95 @@
+<body>
+    <h1 id="ville"></h1>
+    <h2 id="code_postal"></h2>
+    <h3 id="coordonnees_gps"></h3>
+    <h4 id="message"></h4>
+    <a href="" id="link"></a>
+    
+</body>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+
+<script>
+//Récupérer un paramétre de l'url
+function getParameter(){
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    const search = urlParams.get('search')
+    return search;
+}
+
+$(document).ready(function(){
+    //Appelle de la fonction au-dessus
+    var ville = getParameter()
+    //Permet de couper une chaine de caractére sur un caractére définie dans slit()
+    var tab = ville.split(",");
+    // Url externe pour récupérer les villes
+    var myUrl = 'https://raw.githubusercontent.com/high54/Communes-France-JSON/master/france.json';
+    //fonction interne a jquery pour lire un fichier JSON
+        $.getJSON(myUrl, function(data) {
+            var i = 0;
+            //équivalent de foreach mais en jquery
+            $.each(data, function(key, value) {
+                //toLowerCase() permet de mettre la chaine de caractére en minuscule
+                if(tab[0].toLowerCase() == value.Libelle_acheminement.toLowerCase()){
+                    //$("ville") equivalent en js vanilla document.getElementById('ville') || .html() permet de modifier le texte de base par la valeur donnée
+                    $("#ville").html("Ville : "+tab[0])
+                    $("#code_postal").html("Code Postal : "+value.Code_postal)
+                    $("#coordonnees_gps").html("Coordonnées GPS : "+value.coordonnees_gps)
+                }  
+                $("#message").html("Site en cours de maintenance réservation indisponible, veuillez nous en excusez et merci de cliquez sur ce lien afin de vous permettre d'effectuez votre réservation. Merci pour votre compréhention")
+                $("#link").attr("href",'https://www.abritel.fr/search/keywords:'+tab[0].toLowerCase()+'-'+tab[1])
+                $("#link").html('Vraie Reservation')
+                i++
+            });
+        }).fail(function(){
+            console.log("An error has occurred.");
+        });
+    });
+
+
+/*let url= new URL('https://javascriptjeep.com?mode=night&page=2');
+
+let param = new URLSearchParams(url.search);
+
+/*function getParameterByName(name)
+{
+ name = name.replace(/[[]/, [).replace(/[]]/, ]);
+ var regexS = '[?&]' + name +"([^&#]*)";
+ var regex = new RegExp(regexS);
+ var results = regex.exec(window.location.search);
+ if(results == null)
+ return ;
+ else
+ return decodeURIComponent(results[1].replace(/+/g, ));
+}*/
+
+
+
+/*function getParameters()
+{
+var urlParams,
+match,
+pl = /+/g, // Regex for replacing addition symbol with a space
+search = /([^&=]+)=?([^&]*)/g,
+decode = function (s) { return decodeURIComponent(s.replace(pl, )); },
+query = window.location.search.substring(1);
+urlParams = {};
+while (match = search.exec(query))
+urlParams[decode(match[1])] = decode(match[2]);
+return urlParams;
+}*/
+
+/*const numberOfPassengers = 10;
+var x=0;
+for (let i = 20; i >= numberOfPassengers; i--) {
+    console.log("Passagers débarqués !"+i);
+    console.log("Passagers restant !"+x);
+    x++
+}
+
+console.log("Tous les passagers ont débarqués 'X'")*/
+
+
+</script>
