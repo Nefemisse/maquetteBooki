@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/52aec5cfac.js"></script>
     <link type="text/css" rel="stylesheet" href="../style/style.css">
-    <link type="icon" rel="icon" href="../image/logo/transparent-booking-icon-hotel-icon-social-icon-5dbbafc042d766.9672638915725813122738.png">
+    <link type="image/png" rel="icon" href="../image/icones/B_for_booki.png">
     <title>Header</title>
 </head>
 <body>
     <div id="bloc_page">
         <header>
             <nav>
-                <img class="logo" src="../image/logo/Booki@3x.png">
+                <img class="logo" src="../image/logo/Booki@3x.png" alt="logo_booki">
                 <div class="nav">
                     <a href="#">Hébergements</a>
                     <a href="#">Activités</a>
@@ -24,26 +24,30 @@
                 <p class="mute">En plein centre ville ou en pleine nature</p>
             </div>
             <form>
-                <span class="loca"><i class="fa-solid fa-location-dot"></i></span><input type="search" placeholder="  Ville, Pays"><button class="recherche">Rechercher<span class="none"><i class="fa-solid fa-magnifying-glass"></i></span></button></input>
-            </form>
+                <div id="recherche">
+                    <span class="loca"><i class="fa-solid fa-location-dot blue"></i></span><input type="search" placeholder="  Ville, Pays"><button class="recherche">Rechercher<span class="none"><i class="fa-solid fa-magnifying-glass"></i></span></button>
+                </div>
+                </form>
             <div class="filtres">
                 <h3>Filtres</h3>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"><i class="fa-solid fa-money-bill-wave absolute"></i><p class="eco">Économique</p></span>
-                </label>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"><i class="fa-solid fa-child-reaching absolute"></i><p class="eco">Familiale</p></span>
-                </label>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"><i class="fa-solid fa-heart absolute"></i><p class="eco">Romantique</p></span>
-                </label>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"><i class="fa-solid fa-dog absolute"></i><p class="eco">Animaux autorisés</p></span>
-                </label>
+                <div id="switch">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"><i class="fa-solid fa-money-bill-wave absolute"></i><span class="eco">Économique</span></span>
+                    </label>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"><i class="fa-solid fa-child-reaching absolute"></i><span class="eco">Familiale</span></span>
+                    </label>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"><i class="fa-solid fa-heart absolute"></i><span class="eco">Romantique</span></span>
+                    </label>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"><i class="fa-solid fa-dog absolute"></i><span class="eco">Animaux autorisés</span></span>
+                    </label>
+                </div>
             </div>
             <div class="info">
                 <div class="icone_info"><i class="fa-solid fa-info"></i></div>

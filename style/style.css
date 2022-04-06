@@ -1,6 +1,3 @@
-/* Document
-   ========================================================================== */
-
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -172,7 +169,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -182,7 +180,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -335,6 +334,8 @@ template {
   display: none;
 }
 
+/*----------------------------------Fin Normalize--------------------------------*/
+
 body,
 html {
   height: 100%;
@@ -352,6 +353,7 @@ body {
   max-width: 1440px;
   padding: 0 2%;
   box-sizing: border-box;
+  height: 100%;
 }
 
 iframe {
@@ -359,7 +361,7 @@ iframe {
 }
 
 form input {
-  border: 1px solid #F2F2F2;
+  border: 1px solid #f2f2f2;
   width: 20%;
   height: 35px;
 }
@@ -374,7 +376,7 @@ header h2 {
   margin-bottom: 0;
 }
 
-label .eco {
+.eco {
   display: flex;
   justify-content: center;
   margin: 10px 40px 0 40px;
@@ -392,6 +394,10 @@ nav {
   bottom: 0;
   right: 0;
   left: 12px;
+}
+
+.blue {
+  color: #0065fc;
 }
 
 .btn_info {
@@ -418,15 +424,23 @@ nav {
   margin: 0 25px 0 0;
 }
 
+.filtres p {
+  margin: 0;
+}
+
 .icone_info {
-  display:flex;
+  display: flex;
   justify-content: center;
   border: 2px solid rgb(219, 218, 218);
   border-radius: 50%;
   padding: 5px;
   margin-right: 1%;
   width: 16px;
-  color:#0065FC;
+  color: #0065fc;
+}
+
+#recherche {
+  width: 1162px;
 }
 
 .info {
@@ -457,8 +471,8 @@ nav {
 }
 
 .nav a:hover {
-  border-top: 5px solid #0065FC;
-  color: #0065FC;
+  border-top: 5px solid #0065fc;
+  color: #0065fc;
   box-sizing: border-box;
 }
 
@@ -525,7 +539,7 @@ nav {
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  border: 1px solid #F2F2F2;
+  border: 1px solid #f2f2f2;
   width: 226px;
   height: 40px;
 }
@@ -535,7 +549,7 @@ nav {
   content: "";
   height: 34px;
   width: 34px;
-  background-color: #DEEBFF;
+  background-color: #deebff;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   min-height: 40px;
@@ -583,7 +597,15 @@ input:checked + .slider:before {
   }
   .nav a:hover {
     border-top: none;
-    border-bottom: 4px solid #0065FC;
-    border-width: 100%;
+    border-bottom: 4px solid #0065fc;
+  }
+}
+
+@media (max-width: 768px) {
+  .filtres {
+    flex-direction: column;
+  }
+  #switch {
+    flex-direction: column;
   }
 }
