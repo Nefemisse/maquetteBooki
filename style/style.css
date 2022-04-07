@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -355,10 +354,6 @@ body {
   padding: 0 2%;
   box-sizing: border-box;
   height: 100%;
-=======
-body {
-    font-family: 'Raleway', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
->>>>>>> 69075d9 (Premier Push Aside footer)
 }
 
 iframe {
@@ -502,10 +497,6 @@ nav {
   margin-top: -2px;
 }
 
-.none {
-  display: none;
-}
-
 .recherche {
   border-top-right-radius: 8px 8px;
   border-bottom-right-radius: 8px 8px;
@@ -523,7 +514,6 @@ nav {
   height: 0;
 }
 
-<<<<<<< HEAD
 .switch {
   display: flex;
   position: relative;
@@ -611,12 +601,17 @@ input:checked + .slider:before {
   .filtres {
     flex-direction: column;
   }
+
   #switch {
     flex-direction: column;
   }
-<<<<<<< HEAD
+  
+button .recherche {
+  display: none;
 }
-=======
+
+}
+
   
   input:checked + .slider:before {
     -webkit-transform: translateX(26px);
@@ -632,7 +627,7 @@ input:checked + .slider:before {
   .slider.round:before {
     border-radius: 50%;
   }
-=======
+
 body {
     width: 100%;
     height: 100%;
@@ -768,5 +763,3 @@ a.lien {
     text-decoration: none;
     color: black;
 }
->>>>>>> bbb2c1f (Premier Push Aside footer)
->>>>>>> 69075d9 (Premier Push Aside footer)
