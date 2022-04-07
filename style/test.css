@@ -343,7 +343,8 @@ html {
 }
 
 body {
-  font-family: "Raleway, Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Raleway, Trebuchet MS", "Lucida Sans Unicode",
+   "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 #bloc_page {
@@ -860,6 +861,257 @@ a.lien {
 
 }
 
+  /*--------------------------------------- ASIDE -------------------------------->*/
+ .background_white_aside {
+    /*border: 3px solid rgb(255, 149, 0);*/
+    width: 95%;
+    display: flex;    
+  }
+
+/*--------------------------------------header------------------------------------*/
+
+form input {
+  border: 1px solid #f2f2f2;
+  width: 20%;
+  height: 35px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+header h2 {
+  margin-bottom: 0;
+}
+
+.eco {
+  display: flex;
+  justify-content: center;
+  margin: 10px 40px 0 40px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.absolute {
+  position: absolute;
+  top: 12px;
+  bottom: 0;
+  right: 0;
+  left: 12px;
+}
+
+.blue {
+  color: #0065fc;
+}
+
+.btn_info {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+}
+
+.btn_info img {
+  width: 100%;
+  cursor: help;
+}
+
+.filtres {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 2%;
+  align-items: center;
+}
+
+.filtres h3 {
+  margin: 0 25px 0 0;
+}
+
+.filtres p {
+  margin: 0;
+}
+
+.icone_info {
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgb(219, 218, 218);
+  border-radius: 50%;
+  padding: 5px;
+  margin-right: 1%;
+  width: 16px;
+  color: #0065fc;
+}
+
+#recherche {
+  width: 1162px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.logo {
+  width: 130px;
+  height: 60px;
+  padding-top: 2%;
+}
+
+.mute {
+  color: gray;
+  margin-top: 0.5%;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25%;
+  margin-right: 2%;
+  height: 80px;
+}
+
+.nav a:hover {
+  border-top: 5px solid #0065fc;
+  color: #0065fc;
+  box-sizing: border-box;
+}
+
+.info .icone_info:hover + p {
+  color: black;
+}
+
+.loca {
+  border-top-left-radius: 8px 8px;
+  border-bottom-left-radius: 8px 8px;
+  padding: 0.3em 1em 0.3em 1em;
+  background-color: rgb(218, 218, 218);
+  cursor: pointer;
+}
+
+.nav a {
+  text-decoration: none;
+  padding-top: 18%;
+  font-weight: bold;
+  color: black;
+  padding: 25px;
+  margin-top: -2px;
+}
+
+.none {
+  display: none;
+}
+
+.recherche {
+  border-top-right-radius: 8px 8px;
+  border-bottom-right-radius: 8px 8px;
+  background-color: #1c6ce4;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/*-------------------- Hide default HTML checkbox ------------------*/
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch {
+  display: flex;
+  position: relative;
+  display: inline-block;
+  width: 240px;
+  height: 34px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*----------------------------- The slider --------------------------*/
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border: 1px solid #f2f2f2;
+  width: 226px;
+  height: 40px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 34px;
+  width: 34px;
+  background-color: #deebff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  min-height: 40px;
+  min-width: 40px;
+}
+
+input:checked + .slider {
+  background-color: rgb(122, 164, 255);
+  color: white;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(122, 164, 255);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(187px);
+  -ms-transform: translateX(187px);
+  transform: translateX(187px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*----------------------------------------------------------------*/
+
+@media (max-width: 992px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav {
+    width: 100%;
+  }
+  .nav a {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .nav a:hover {
+    border-top: none;
+    border-bottom: 4px solid #0065fc;
+  }
+}
+
 
 /* ------------------------------------------------------------- VERSION TABLETTE -------------------------------------------------------*/
 @media screen and (max-width: 768px) {
@@ -889,13 +1141,11 @@ a.lien {
     width: 50%;
   }
 
-
-  /*--------------------------------------- ASIDE -------------------------------->*/
- .background_white_aside {
-    /*border: 3px solid rgb(255, 149, 0);*/
-    width: 95%;
-    display: flex;
-    
+ .filtres {
+    flex-direction: column;
   }
 
+  #switch {
+    flex-direction: column;
+  }
 }
